@@ -1,5 +1,11 @@
 ## Plugin Definitions
 
+### Plugin ID
+
+```
+com.vivollo.chat
+```
+
 ### Manifest
 
 ```json
