@@ -4,8 +4,8 @@
 
 ```json
 {
-  "title": "KVKK/Pazarlama İzinleri",
-  "src": "https://grispi.app/myor-permits-side-plugin/build/",
+  "title": "Vivollo Chat",
+  "src": "https://grispi.app/vivollo-chat-side-plugin/build/",
   "uiDefinition": {
     "height": 900
   },
@@ -17,7 +17,10 @@
 ### Settings
 
 ```json
-{}
+{
+  "channel_id": "{{ VIVOLLO_CHANNEL_ID }}",
+  "tenant_id": "{{ VIVOLLO_TENANT_ID }}"
+}
 ```
 
 ## Testing the Application
