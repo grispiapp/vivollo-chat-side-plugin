@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/myor-permits-side-plugin/build/static/css/main.56e3ad97.css",
-    "main.js": "/myor-permits-side-plugin/build/static/js/main.cdf3c466.js",
-    "index.html": "/myor-permits-side-plugin/build/index.html",
-    "main.56e3ad97.css.map": "/myor-permits-side-plugin/build/static/css/main.56e3ad97.css.map",
-    "main.cdf3c466.js.map": "/myor-permits-side-plugin/build/static/js/main.cdf3c466.js.map"
+    "main.css": "/vivollo-chat-side-plugin/build/static/css/main.b18f258b.css",
+    "main.js": "/vivollo-chat-side-plugin/build/static/js/main.cbda1390.js",
+    "index.html": "/vivollo-chat-side-plugin/build/index.html",
+    "main.b18f258b.css.map": "/vivollo-chat-side-plugin/build/static/css/main.b18f258b.css.map",
+    "main.cbda1390.js.map": "/vivollo-chat-side-plugin/build/static/js/main.cbda1390.js.map"
   },
   "entrypoints": [
-    "static/css/main.56e3ad97.css",
-    "static/js/main.cdf3c466.js"
+    "static/css/main.b18f258b.css",
+    "static/js/main.cbda1390.js"
   ]
 }
