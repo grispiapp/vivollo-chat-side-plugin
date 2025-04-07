@@ -46,6 +46,8 @@ export const ChatScreen = observer(() => {
         });
       } catch (error: any) {
         if ('message' in error && typeof error.message === 'string') {
+          console.error('widget error', { error });
+
           if (error.message.includes('E3')) {
             return;
           }
