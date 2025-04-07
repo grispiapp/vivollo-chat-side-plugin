@@ -2,6 +2,16 @@ import { observer } from "mobx-react-lite";
 import { useGrispi } from "@/contexts/grispi-context";
 import { useEffect, useState } from "react";
 
+const createWidgetElementIfDoesntExists = () => {
+  const widgetEl = document.getElementById("vivollo-chat-widget");
+
+  if (!widgetEl) {
+    const widget = document.createElement("div");
+    widget.id = "vivollo-chat-widget";
+    document.body.appendChild(widget);
+  }
+}
+
 const removeChatWidget = () => {
   document.getElementById("vivollo-chat-widget")?.remove();
 };
@@ -24,6 +34,8 @@ export const ChatScreen = observer(() => {
 
     const createChatWidget = async () => {
       try {
+        createWidgetElementIfDoesntExists();
+
         await window.Vivollo.create({
           tenantId,
           channelId,
@@ -32,7 +44,13 @@ export const ChatScreen = observer(() => {
             element: "#vivollo-chat-widget",
           },
         });
-      } catch (error) {
+      } catch (error: any) {
+        if ('message' in error && typeof error.message === 'string') {
+          if (error.message.includes('E3')) {
+            return;
+          }
+        }
+
         removeChatWidget();
         setError("Error creating chat widget. Please contact support.");
       }
